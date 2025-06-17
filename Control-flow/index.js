@@ -119,3 +119,43 @@
 // else {
 //     window.alert('Incorrect password')
 // }
+
+
+/*
+This if/else statement does not work. Try to fix it: 
+var greeting; 
+var hour = 13; 
+if (hour < 18) { 
+greeting = "Good day"; 
+else 
+greeting = "Good evening"; 
+}
+*/
+
+
+// I modefied the code and add some changes 
+
+    let greeting; 
+    let hour = parseFloat(window.prompt("Enter your current time please")); 
+
+    if (hour >= 6 && hour < 12) { 
+    greeting = "Good morning";
+    } 
+
+    else if (hour >= 12 && hour <16 ) {
+        greeting = "Good afternoon";
+    }
+
+    else if (hour >= 16 && hour < 20) { 
+        greeting = "Good evening"; 
+    }
+
+    else if (hour >= 20 || hour < 6) {
+        greeting = "Good night";
+    }
+
+    else {
+        greeting = "please enter a valid time"
+    }
+
+    window.alert(greeting)
