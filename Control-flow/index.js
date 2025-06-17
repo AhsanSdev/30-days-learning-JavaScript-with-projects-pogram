@@ -87,13 +87,35 @@
 // input.toLowerCase() helps match even if user enters capital letter like A, E etc
 
 
-let input = window.prompt("enter a character")
-const vowel = ["a", "e", "i", "o", "u",]
+// let input = window.prompt("enter a character")
+// const vowel = ["a", "e", "i", "o", "u",]
 
-if (input.length === 1 && vowel.includes(input.toLowerCase())) {
-    window.alert("your character is a vowel")
-}
+// if (input.length === 1 && vowel.includes(input.toLowerCase())) {
+//     window.alert("your character is a vowel")
+// }
 
-else {
-    window.alert("your character is not a vowel")
-}
+// else {
+//     window.alert("your character is not a vowel")
+// }
+
+// Write a program that a. Store correct password in a JS variable. b.  Asks user to enter his/her password c.   Validate the two passwords: i. Check if user has entered password. If not, then 
+// give message “ Please enter your password” ii. Check if both passwords are same. If they are 
+// same, show message “Correct! The password you 
+// entered matches the original password”. Show 
+// “Incorrect password” otherwise
+
+// const password = "ahsan111";
+
+// let inputPass = window.prompt("Please enter your password");
+
+// if (!inputPass){
+//     window.alert("please enter your password")
+// }
+
+// else if (inputPass == password) {
+//     window.alert("Correct! The password you entered matches the original password");    
+// }
+
+// else {
+//     window.alert('Incorrect password')
+// }
