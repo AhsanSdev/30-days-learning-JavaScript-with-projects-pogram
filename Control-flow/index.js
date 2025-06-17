@@ -41,20 +41,39 @@
 
 // My logic one 
 
-//parseInt is a built in function converts a string to an integer
+//parseInt and parseFloat is a built in function converts a string to an integer or number
 
-let num1 = parseInt(window.prompt("enter a number"))
-let num2 = parseInt(window.prompt("enter a number"))
+// let num1 = parseInt(window.prompt("enter a number"))
+// let num2 = parseInt(window.prompt("enter a number"))
 
-if (num1 > num2) {
-    console.log(`${num1} "is greater than" ${num2}`);
+// if (num1 > num2) {
+//     console.log(`${num1} "is greater than" ${num2}`);
+// }
+
+// else if (num2 > num1) {
+//     console.log(`${num2} "is greater than" ${num1}`);
+// }
+
+
+// else {
+//     console.log("both numbers are equal");
+// }
+
+
+// Write a program that takes input a number from user & 
+// state whether the number is positive, negative or zero
+
+let input = parseFloat(window.prompt("enter a number"));
+
+
+if (input >0) {
+    window.alert("it's a possitive number");
 }
 
-else if (num2 > num1) {
-    console.log(`${num2} "is greater than" ${num1}`);
+else if (input <0) {
+    window.alert("it's a negative number");
 }
-
 
 else {
-    console.log("both numbers are equal");
+    window.alert("it's a zero");
 }
