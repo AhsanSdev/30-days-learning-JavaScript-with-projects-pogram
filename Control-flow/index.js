@@ -63,17 +63,37 @@
 // Write a program that takes input a number from user & 
 // state whether the number is positive, negative or zero
 
-let input = parseFloat(window.prompt("enter a number"));
+// let input = parseFloat(window.prompt("enter a number"));
 
 
-if (input >0) {
-    window.alert("it's a possitive number");
-}
+// if (input >0) {
+//     window.alert("it's a possitive number");
+// }
 
-else if (input <0) {
-    window.alert("it's a negative number");
+// else if (input <0) {
+//     window.alert("it's a negative number");
+// }
+
+// else {
+//     window.alert("it's a zero");
+// }
+
+
+// Write a program that takes a character (i.e. string of 
+// length 1) and returns true if it is a vowel, false otherwise
+
+
+//Use .includes() to check if your input is inside the vowel array
+// input.toLowerCase() helps match even if user enters capital letter like A, E etc
+
+
+let input = window.prompt("enter a character")
+const vowel = ["a", "e", "i", "o", "u",]
+
+if (input.length === 1 && vowel.includes(input.toLowerCase())) {
+    window.alert("your character is a vowel")
 }
 
 else {
-    window.alert("it's a zero");
+    window.alert("your character is not a vowel")
 }
