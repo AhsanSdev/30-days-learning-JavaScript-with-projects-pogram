@@ -39,7 +39,7 @@
 // display the larger. Also show if the two integers are equal.
 
 
-// My logic one
+// My logic one 
 
 //parseInt is a built in function converts a string to an integer
 
@@ -52,4 +52,9 @@ if (num1 > num2) {
 
 else if (num2 > num1) {
     console.log(`${num2} "is greater than" ${num1}`);
+}
+
+
+else {
+    console.log("both numbers are equal");
 }
