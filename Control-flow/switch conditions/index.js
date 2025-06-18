@@ -1,35 +1,35 @@
-    // let color = window.prompt("please enter your favaroite background color");
+// let color = window.prompt("please enter your favaroite background color");
 
-    // switch (color) {
-    //     case "red":
-    //         window.alert("Your background color is changed to red");
-    //         document.body.style.backgroundColor = color;
-    //     break;
+// switch (color) {
+//     case "red":
+//         window.alert("Your background color is changed to red");
+//         document.body.style.backgroundColor = color;
+//     break;
 
-    //     case "green":
-    //         window.alert("Your background color is changed to green");
-    //         document.body.style.backgroundColor = color;
-    //     break;
+//     case "green":
+//         window.alert("Your background color is changed to green");
+//         document.body.style.backgroundColor = color;
+//     break;
 
-    //     case "blue":
-    //         window.alert("Your background color is changed to blue");
-    //         document.body.style.backgroundColor = color;
-    //     break;
+//     case "blue":
+//         window.alert("Your background color is changed to blue");
+//         document.body.style.backgroundColor = color;
+//     break;
 
-    //     case "purple":
-    //         window.alert("Your background color is changed to purple");
-    //         document.body.style.backgroundColor = color;
-    //     break;
+//     case "purple":
+//         window.alert("Your background color is changed to purple");
+//         document.body.style.backgroundColor = color;
+//     break;
 
-    //     case "black":
-    //         window.alert("Your background color is changed to red");
-    //         document.body.style.backgroundColor = color;
-    //     break;
+//     case "black":
+//         window.alert("Your background color is changed to red");
+//         document.body.style.backgroundColor = color;
+//     break;
 
-    //     default:
-    //         window.alert("please choose a valid bg color");
-    //         break;
-    // }
+//     default:
+//         window.alert("please choose a valid bg color");
+//         break;
+// }
 
 
 // Prompt user to enter a traffic light color: "red", "yellow", "green"
@@ -104,4 +104,34 @@
 //     default:
 //         window.alert("please enter a valid month");
 //         break;
+// }
+
+
+// User inputs a day (e.g., "Monday", "sunday" etc.)
+// 🔹 Output:
+// "Weekday" for Mon–Fri
+// "Weekend" for Sat–Sun
+// "Invalid" for anything else
+
+// 🆕 Suggestion: Use .toLowerCase() to make input case-insensitive
+
+
+// let input = window.prompt("please enter your current day").toLowerCase();
+
+// switch (input) {
+//     case "monday":
+//     case "tuesday":
+//     case "wednesday":
+//     case "thursday":
+//     case "friday":
+//         window.alert("Damn! its Weekday");
+//         break;
+
+//     case "saturday":
+//     case "sunday":
+
+//     default:
+//         window.alert("Invalid");
+//         break;
+
 // }
