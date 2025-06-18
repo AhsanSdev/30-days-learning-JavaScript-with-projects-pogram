@@ -130,6 +130,10 @@
 //     case "saturday":
 //     case "sunday":
 
+//  window.alert("hurray! its Weekend");
+//         break;
+
+
 //     default:
 //         window.alert("Invalid");
 //         break;
