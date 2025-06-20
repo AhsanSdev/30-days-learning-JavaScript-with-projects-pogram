@@ -91,3 +91,48 @@
 
 */
 
+
+
+/*🔧 Project Name: Smart Text Analyzer
+📝 User Input: Ek text (jaise ek paragraph)
+
+📊 Output:
+
+-Total characters
+
+-Total words
+
+-Text in UPPERCASE
+
+-Text in lowercase
+
+-Does it contain a specific word? (e.g. "JavaScript")
+
+-First 20 characters (using slice)
+
+-Replace any word (e.g. "bad" ➝ "good")
+
+✅ Example Output:
+Input:
+" JavaScript is awesome. I love JavaScript! "
+
+Output:
+
+Characters: 45
+
+Words: 6
+
+Uppercase: "JAVASCRIPT IS AWESOME. I LOVE JAVASCRIPT!"
+
+Lowercase: "javascript is awesome. i love javascript!"
+
+Contains "JavaScript"? ✅
+
+First 20 chars: "JavaScript is aweso"
+
+After replace: "JavaScript is awesome. I love TypeScript!"
+
+🔤 Concepts Covered:
+trim(), length, split(), includes(), toUpperCase(), toLowerCase(), slice(), replace()
+
+*/
