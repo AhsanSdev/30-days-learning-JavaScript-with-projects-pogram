@@ -4,14 +4,89 @@
 // ➡️ String ki length batata hai
 // "hello".length  5
 
-let input = parseFloat(window.prompt("please enter your password").length(input));
+// let input = window.prompt("Please enter your password");
 
-if (input.legnht < 8) {
-    window.alert("your password should contain 8 words")
-}
-else {
-    window.alert("Thanks for your Input");
-}
+// if (input.length < 8) {
+//     window.alert("Your password should contain at least 8 characters");
+// } else {
+//     window.alert("Thanks for your input");
+// }
+
+// let input = prompt("please enter your answer");
+
+// alert(`your written characters are ${input.length}`);
+
+
+// Ask the user for a password.
+// If it contains spaces, show:
+// "Password should not contain spaces"
+// Else, show:
+// "Password accepted"
+
+// let input = prompt("please enter your password and password dont contain spaces");
+
+// if (input.includes(" ")) {
+//     alert("Password should not contain spaces please try again");
+// }
+
+// else {
+//     alert("thanks for your input");
+// }
+
+
+// Goal:
+// Ask the user for a password. Check if:
+
+// It has at least 8 characters
+
+// It contains at least one number (0-9)
+
+// If both are true → show: "Strong password"
+// Else → show: "Weak password"
+
+
+//notes = /\d/ is a regular expression (regex) It checks if a string contains any digit (0–9)
+
+// Bonus tip: Instead of hasNum == false, you can just write !hasNum (optional, cleaner).
+
+
+// let passKey = prompt("please enter your password and it must contain numbers");
+// let hasNum = /\d/.test(passKey);
+
+// if (passKey.length < 8 || !hasNum) {
+//         alert("please enter a strong password");
+// }
+
+// else {
+//     alert("thanks for your input");
+// }
+
+// Task: Very Strong Password Check
+// Check if the password:
+
+// Has at least 8 characters
+
+// Has at least one number
+
+// Has at least one uppercase letter
+
+// Has at least one special character (like @, #, $, %, etc.)
+
+
+// let passKey = prompt("please enter a strong password which includes at least 8 characters, at least one number, at least one uppercase letter, at least one special character (like @, #, $, %, etc.)")
+
+// let hasNum = /\d/.test(passKey);
+// let hasSpecCHar = /[!@#$%^&*()"]/.test(passKey);
+// let upCase = /[A-Z]/.test(passKey);
+
+// if(passKey.length < 8 || !hasNum || !hasSpecCHar || !upCase) {
+//     alert("please enter a strong password");
+// }
+
+// else {
+//     alert("thanks for your input")
+// }
+
 
 
 // 2. toUpperCase()
