@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-tr from-[#f0f4ff] to-[#eaf6ff] flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md p-8 bg-white/80 backdrop-blur-md border border-[#d1e3ff] rounded-3xl shadow-2xl animate-slide-fade">
+      <div class="flex justify-center mb-4">
+        <div class="w-12 h-12 bg-[#246bfd] rounded-full flex items-center justify-center shadow-lg">
+          <span class="text-white font-bold text-lg">S</span>
+        </div>
+      </div>
+      <h2 class="text-center text-2xl font-extrabold text-[#1f3b8d] mb-6">Welcome Back 👋</h2>
+
+      <form class="space-y-5">
+        <div>
+          <label class="block text-sm font-semibold text-[#1f3b8d]">Email</label>
+          <input type="email" required class="w-full mt-1 px-4 py-2 border border-[#cbd8ff] rounded-xl shadow-inner focus:outline-none focus:ring-2 focus:ring-[#246bfd]/70 transition duration-200" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-[#1f3b8d]">Password</label>
+          <input type="password" required class="w-full mt-1 px-4 py-2 border border-[#cbd8ff] rounded-xl shadow-inner focus:outline-none focus:ring-2 focus:ring-[#246bfd]/70 transition duration-200" />
+        </div>
+
+        <div class="flex items-center justify-between">
+          <label class="flex items-center space-x-2 text-sm text-[#3457d5]">
+            <input type="checkbox" class="accent-[#246bfd] h-4 w-4 rounded" />
+            <span>Keep me signed in</span>
+          </label>
+          <a href="#" class="text-sm text-[#246bfd] hover:underline">Forgot?</a>
+        </div>
+
+        <button type="submit" class="w-full bg-[#246bfd] hover:bg-[#1d58d4] text-white font-semibold py-2 px-4 rounded-xl transition duration-300">
+          Sign In
+        </button>
+      </form>
+
+      <div class="mt-6 flex items-center justify-between space-x-2">
+        <button class="flex-1 flex items-center justify-center gap-2 bg-[#f9f9f9] border border-[#e2e8f0] px-4 py-2 rounded-xl hover:bg-[#f1f5f9] transition">
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="h-5" alt="Google" />
+          <span class="text-sm font-medium">Google</span>
+        </button>
+        <button class="flex-1 flex items-center justify-center gap-2 bg-[#f9f9f9] border border-[#e2e8f0] px-4 py-2 rounded-xl hover:bg-[#f1f5f9] transition">
+          <img src="https://www.svgrepo.com/show/512317/github-142.svg" class="h-5" alt="GitHub" />
+          <span class="text-sm font-medium">GitHub</span>
+        </button>
+      </div>
+
+      <p class="mt-6 text-center text-sm text-[#4c5b7d]">
+        Don’t have an account?
+        <a href="#" class="text-[#246bfd] hover:underline">Create one</a>
+      </p>
+    </div>
+
+    <style>
+      @keyframes slide-fade {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-slide-fade {
+        animation: slide-fade 0.9s ease-out;
+      }
+    </style>
+  </body>
+</html>
