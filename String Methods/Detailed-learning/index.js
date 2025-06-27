@@ -93,6 +93,10 @@
 // ➡️ Sab characters ko uppercase banata hai
 // "hi".toUpperCase() // "HI"
 
+let input = prompt("please enter your name");
+
+
+
 // 3. toLowerCase()
 // ➡️ Sab characters ko lowercase banata hai
 // "HI".toLowerCase() // "hi"
