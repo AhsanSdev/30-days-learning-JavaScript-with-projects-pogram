@@ -93,7 +93,7 @@
 // ➡️ Sab characters ko uppercase banata hai
 // "hi".toUpperCase() // "HI"
 
-let input = prompt("please enter your name");
+// let input = prompt("please enter your name");
 
 
 
