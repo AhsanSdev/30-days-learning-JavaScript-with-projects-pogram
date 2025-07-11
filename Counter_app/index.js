@@ -11,10 +11,18 @@ function add(){
 //function callback html file me ho raha hai yahan nahi
 
 function minus(){
-    document.getElementById("counter").innerHTML = --count;
+
+    if (count > 0) {
+           document.getElementById("counter").innerHTML = --count;
+    }
+
+    else {
+        count = 0
+    }
 }
 
 
 function reset(){
-    document.getElementById("counter").innerHTML = 0;
+    count = 0;
+    document.getElementById("counter").innerHTML = count;
 }
