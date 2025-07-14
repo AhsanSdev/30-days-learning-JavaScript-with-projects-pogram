@@ -60,3 +60,15 @@
 // }
 
 // greet(userInput);
+
+
+//Prompt se koi color name/code lo → body ka background color change karo.
+
+let input = prompt("please enter a color");
+
+function color (input) {
+    document.body.style.backgroundColor = input;
+
+}
+
+color(input);

@@ -2,104 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LifeCanvas — Tasks</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* =========  GLOBAL  ========= */
-    :root {
-      --primary: #2563eb;
-      --primary-light: #3b82f6;
-      --bg: #eef5ff;
-      --white: #fff;
-      --glass: rgba(255, 255, 255, 0.55);
-      --border: rgba(255, 255, 255, 0.25);
-      --text: #0f172a;
-      --muted: #64748b;
+    .done {
+      @apply line-through text-gray-400 transition-all duration-300;
     }
-
-    *,*::before,*::after {box-sizing:border-box;transition:all .3s ease;font-family:'Poppins',sans-serif;margin:0;padding:0;}
-    body {background:var(--bg);color:var(--text);min-height:100vh;display:flex;overflow-x:hidden;}
-    a{color:inherit;text-decoration:none}
-
-    /* =========  SIDEBAR  ========= */
-    .sidebar{width:72px;background:var(--primary);padding:20px 12px;display:flex;flex-direction:column;align-items:center;gap:28px;position:fixed;inset:0 auto 0 0;z-index:5;border-right:2px solid var(--border);} 
-    .sidebar i{font-size:1.25rem;color:var(--white);cursor:pointer;position:relative;} 
-    .sidebar i.active::after{content:'';position:absolute;left:50%;top:120%;transform:translateX(-50%);width:6px;height:6px;border-radius:50%;background:var(--white);} 
-    .sidebar .logo{font-weight:700;font-size:1.4rem;margin-bottom:20px;} 
-
-    /* =========  TOPBAR  ========= */
-    .topbar{width:calc(100% - 72px);margin-left:72px;padding:22px clamp(16px,4vw,48px);display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(14px);background:var(--glass);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:4;} 
-    .search-wrap{position:relative;max-width:320px;width:100%;} 
-    .search-wrap input{width:100%;padding:10px 14px 10px 42px;border-radius:12px;border:2px solid var(--primary-light);background:var(--white);} 
-    .search-wrap i{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--primary-light);} 
-    .fab{background:var(--primary);color:var(--white);border:none;padding:11px 20px;border-radius:12px;font-weight:500;display:flex;align-items:center;gap:10px;cursor:pointer;box-shadow:0 6px 14px rgba(37,99,235,.25);} 
-    .fab:hover{transform:translateY(-2px);background:var(--primary-light);} 
-
-    /* =========  MAIN  ========= */
-    main{flex:1;margin-left:72px;padding:calc(22px + 64px) clamp(16px,4vw,48px) 48px;} 
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:28px;} 
-
-    /* =========  CARD  ========= */
-    .card{background:var(--glass);border:1px solid var(--border);backdrop-filter:blur(20px);border-radius:20px;padding:22px 24px;display:flex;flex-direction:column;gap:14px;box-shadow:0 10px 30px rgba(0,0,0,.06);opacity:0;transform:translateY(10px);animation:fade .5s forwards;} 
-    .card .title{font-weight:600;font-size:1.05rem;} 
-    .card .date{font-size:.8rem;color:var(--muted);} 
-    .progress{width:100%;height:6px;border-radius:3px;background:rgba(37,99,235,.2);overflow:hidden;} 
-    .progress-bar{height:100%;background:var(--primary);} 
-    .chip{align-self:flex-start;padding:2px 10px;font-size:.72rem;border-radius:8px;background:rgba(37,99,235,.15);color:var(--primary);} 
-    .actions{margin-top:auto;display:flex;gap:18px;font-size:1.1rem;color:var(--primary);} 
-    .actions i:hover{transform:scale(1.25);} 
-
-    @keyframes fade{to{opacity:1;transform:none}} 
-
-    /* =========  RESPONSIVE  ========= */
-    @media (max-width:700px){.topbar{flex-wrap:wrap;gap:12px}.fab{width:100%;justify-content:center}.search-wrap{flex:1}.grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr));}}
+    .fade-in {
+      animation: fadeIn 0.4s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
   </style>
 </head>
-<body>
-  <!-- ===== SIDEBAR ===== -->
-  <aside class="sidebar">
-    <div class="logo">LC</div>
-    <i class="fa fa-table-cells active" title="All"></i>
-    <i class="fa fa-hourglass-half" title="In‑Progress"></i>
-    <i class="fa fa-check-circle" title="Done"></i>
-    <i class="fa fa-gear" title="Settings" style="margin-top:auto;"></i>
-  </aside>
+<body class="bg-gradient-to-br from-blue-100 to-white min-h-screen flex items-center justify-center p-4">
 
-  <!-- ===== TOPBAR ===== -->
-  <header class="topbar">
-    <h2>Tasks</h2>
-    <div style="display:flex;align-items:center;gap:18px;flex:1;justify-content:flex-end;flex-wrap:wrap;">
-      <div class="search-wrap">
-        <i class="fa fa-search"></i>
-        <input type="text" placeholder="Search…" />
-      </div>
-      <button class="fab"><i class="fa fa-plus"></i>New Task</button>
+  <div class="bg-white shadow-2xl rounded-2xl w-full max-w-md p-6 space-y-6">
+    <h1 class="text-2xl font-bold text-center text-blue-700">To-Do List</h1>
+
+    <!-- Add Task -->
+    <div class="flex gap-2">
+      <input type="text" placeholder="Add new task..."
+        class="flex-1 p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"/>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition">
+        Add
+      </button>
     </div>
-  </header>
 
-  <!-- ===== MAIN ===== -->
-  <main>
-    <section class="grid" id="taskGrid">
-      <!-- sample card -->
-      <article class="card" style="--d:0">
-        <span class="chip">Pending</span>
-        <div class="title">Design onboarding flow</div>
-        <span class="date">Due: 30 Jun 2025</span>
-        <div class="progress"><div class="progress-bar" style="width:40%"></div></div>
-        <div class="actions">
-          <i class="fa fa-pen-to-square"></i>
-          <i class="fa fa-trash"></i>
+    <!-- Task List -->
+    <ul class="space-y-3 max-h-64 overflow-y-auto pr-1">
+      <li class="flex items-center justify-between bg-blue-50 p-3 rounded-xl shadow fade-in group">
+        <span class="text-gray-800 group-[.done]:line-through group-[.done]:text-gray-400 transition-all duration-300">
+          Finish homework
+        </span>
+        <div class="flex items-center gap-2">
+          <button class="text-green-500 hover:text-green-600 text-lg transition">
+            ✅
+          </button>
+          <button class="text-red-500 hover:text-red-700 transition">✕</button>
         </div>
-      </article>
-      <!-- duplicate this card for more tasks -->
-    </section>
-  </main>
+      </li>
 
-  <script>
-    /* Staggered fade‑in */
-    document.querySelectorAll('.card').forEach((c,i)=>c.style.animationDelay=`${i*90}ms`);
-  </script>
+      <li class="flex items-center justify-between bg-blue-50 p-3 rounded-xl shadow fade-in group">
+        <span class="text-gray-800 group-[.done]:line-through group-[.done]:text-gray-400 transition-all duration-300">
+          Workout
+        </span>
+        <div class="flex items-center gap-2">
+          <button class="text-green-500 hover:text-green-600 text-lg transition">
+            ✅
+          </button>
+          <button class="text-red-500 hover:text-red-700 transition">✕</button>
+        </div>
+      </li>
+    </ul>
+
+    <!-- Footer -->
+    <div class="text-center text-sm text-gray-500 pt-2">
+      Made by Ahsan Sheikh
+    </div>
+  </div>
+
 </body>
 </html>
