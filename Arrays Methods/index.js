@@ -79,32 +79,78 @@
 
 
 // Initialize an array with color names. Display the array 
-// elements in your browser. 
+// elements in your browser.
+
+
+let colors = ["red", "blue", "purple", "green"];
+
+
 // a. Ask the user what color he/she wants to add to the 
 // beginning & add that color to the beginning of the array. 
 // Display the updated array in your browser. 
+
+
+// let input = window.prompt("please enter which color you want to add in bigginig");
+
+// colors.unshift(input);
+
+// let diplay = document.write(colors);
+
+
 // b. Ask the user what color he/she wants to add to the end 
 // & add that color to the end of the array. Display the 
-// updated array in your browser. 
+// updated array in your browser.
+
+
+// let input = window.prompt("please enter which color you want to add in end");
+
+// colors.push(input);
+
+// let diplay = document.write(colors);
+
+
 // c. Add two more color to the beginning of the array. 
 // Display the updated array in your browser. 
+
+
+// colors.unshift("light green", "light blue");
+
+// let diplay = document.write(colors);
+
+
 // d. Delete the first color in the array. Display the updated 
 // array in your browser. 
+
+
+// colors.shift();
+
+// let diplay = document.write(colors);
+
+
 // e. Delete the last color in the array. Display the updated 
 // array in your browser. 
+
+
+// colors.pop();
+
+// let diplay = document.write(colors);
+
+
 // f. Ask the user at which index he/she wants to add a color 
 // & color name. Then add the color to desired 
 // position/index. . Display the updated array in your 
 // browser. 
+
+let input = prompt("please enter an index which you want to add a color ")
+
+colors.splice(colors)
+
+
+
+
+
+
 // g. Ask the user at which index he/she wants to delete 
 // color(s) & how many colors he/she wants to delete. Then remove the same number of color(s) from user-defined 
 // position/index. . Display the updated array in your 
 // browser.
-
-let colors = ["red", "blue", "purple", "green"];
-
-let input = window.prompt("please enter which color you want to add in bigging");
-
-// input.unShift()
-
-document.write("<br> hi there</br>"+ input)
