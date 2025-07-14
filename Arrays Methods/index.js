@@ -143,9 +143,9 @@ let colors = ["red", "blue", "purple", "green"];
 
 let input = prompt("please enter an index which you want to add a color ")
 
-colors.splice(colors)
+colors.splice(2, input)
 
-
+document.write(colors)
 
 
 
